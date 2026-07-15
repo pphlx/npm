@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { WASI } = require('wasi');
 const { spawn } = require('child_process');
 
 // Determine output directory from config
