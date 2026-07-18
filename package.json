@@ -21,5 +21,9 @@
     "hydration"
   ],
   "author": "PPHLX",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pphlx/npm.git"
+  }
 }
