@@ -5,6 +5,18 @@ All notable changes to the PPHLX Node.js compiler CLI will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.9] - 2026-07-22
+
+### Added
+- **Global Version Flags**: Full CLI support for `pphlx --version`, `pphlx -v`, `pphlx version`, and `pphlx -version` across native binaries, NPM (`npx pphlx -v`), and Composer (`vendor/bin/pphlx -v`).
+- **Network Interface Host Binding**: Multi-adapter local IP resolution for `pphlx dev --host`, automatically displaying local network URLs.
+
+### Fixed
+- **Installer User Space Permissions**: Updated universal installer script (`install.sh`) to target `$HOME/.pphlx/bin` without requiring administrator (`sudo`) privileges.
+- **PowerShell Windows Asset Matcher**: Fixed string matching logic in `install.ps1` to prevent false positive matching against Darwin binaries.
+
+---
+
 ## [1.0.8] - 2026-07-20
 
 ### Added
