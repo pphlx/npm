@@ -5,6 +5,18 @@ All notable changes to the PPHLX Node.js compiler CLI will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-07-23
+
+### Added
+- **Clean Root Layout Scaffolding**: `npx pphlx init` and post-install hooks scaffold root `layouts/Layout.pphx`, `components/`, and `index.pphx` out of `src/` for monolithic project templates.
+
+### Fixed
+- **Dev Server Port Allocation & Health Monitoring**: Port pre-checks across IPv4 (`127.0.0.1`), IPv6 (`[::1]`), and wildcard (`0.0.0.0`) sockets with 150ms PHP process health checks, auto-incrementing on binding collisions (`6321` -> `6322`).
+- **Configuration Diagnostic Messaging**: Replaced hardcoded `./test_project/pphlx.config.json` error with clean diagnostic configuration prompts.
+- **Watcher Optimization**: Watcher filters out `dist/` and `node_modules/` to eliminate infinite rebuild loops when `"srcDir": "."`.
+
+---
+
 ## [1.0.9] - 2026-07-22
 
 ### Added
