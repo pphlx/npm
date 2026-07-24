@@ -5,6 +5,19 @@ All notable changes to the PPHLX Node.js compiler CLI will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-07-24
+
+### Added
+- **1-Line Scaffolder Support**: Added compatibility with `create-pphlx` (`npm create pphlx@latest`) for instant project initialization across all environments.
+- **Sub-Millisecond & Pipeline Build Timing**: Added precision build timing output (`✓ Built in 0.8ms`), Standalone Go binary compilation timing, and total pipeline elapsed duration.
+
+### Fixed
+- **Cross-Platform Native CLI Execution**: Added automatic native platform binary resolution (`pphlx-win.exe`, `pphlx-macos-arm64/amd64`, `pphlx-linux-arm64/amd64`) in `bin/pphlx.js` with `chmod 755` permissions auto-applied on Linux and macOS.
+- **WASI Fallback Polyfill**: Polyfilled `wasi_snapshot_preview1` via Node.js `wasi` module to eliminate WASM instantiation errors on non-Windows operating systems.
+- **Cross-Platform Vite Delegation**: Updated Vite shell execution in Go compiler core to select `cmd /c` on Windows and `sh -c` on Linux/macOS, fixing `exec: "cmd": executable file not found in $PATH` errors.
+
+---
+
 ## [1.1.0] - 2026-07-23
 
 ### Added

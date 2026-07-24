@@ -1,14 +1,22 @@
 # PPHLX Compiler
 
-![npm](https://img.shields.io/npm/v/pphlx)
-![npm downloads](https://img.shields.io/npm/dm/pphlx)
-![License](https://img.shields.io/npm/l/pphlx)
+<br/>
+<p align="center">
+  <img src=".github/assets/banner.webp" alt="Bring Your Own UI Framework">
+  <br/><br/>
+  <a href="https://pphlx.org">PPHLX</a> is the high-performance monolithic compiler for modern PHP web applications.
+  <br/>
+  Build component-driven PHP apps with React, Vue, Svelte, or pure PHP templates — with zero Node.js runtime in production.
+  <br/><br/>
+</p>
 
-> Modern web components. Zero runtime. Pure PHP output.
+<p align="center">
+  <img src="https://img.shields.io/npm/v/pphlx" alt="npm version">
+  <img src="https://img.shields.io/npm/dm/pphlx" alt="npm downloads">
+  <img src="https://img.shields.io/npm/l/pphlx" alt="License">
+</p>
 
-Official Node.js CLI for PPHLX — a high-performance compiler for building modern, component-based PHP applications.
-
-Powered by a Go-compiled WebAssembly (WASI) runtime, PPHLX runs consistently on Windows, macOS, and Linux without requiring native compiler installations.
+Official Node.js CLI launcher for PPHLX. Includes pre-compiled native binaries and WebAssembly fallback to run seamlessly across Windows, macOS, and Linux without external compiler dependencies.
 
 ---
 
@@ -28,18 +36,26 @@ Powered by a Go-compiled WebAssembly (WASI) runtime, PPHLX runs consistently on 
 
 Get your project up and running in seconds:
 
+### Recommended (1-Line Project Setup)
+```bash
+npm create pphlx@latest my-app
+cd my-app
+npm install
+npm run dev
+```
+
+### Manual Setup (Existing Project)
 1. **Install PPHLX locally**:
    ```bash
    npm install pphlx
    ```
-   *(Note: The installer automatically configures `dev`, `start`, `watch`, `build`, `preview`, and `check` shortcut triggers inside your project's `package.json` scripts block).*
 
-2. **Initialize your project configuration**:
+2. **Initialize project configuration & template scaffolding**:
    ```bash
    npx pphlx init
    ```
 
-3. **Start the local development server** (with hot reload and background PHP routing):
+3. **Start local development server** (with hot reload and background PHP routing):
    ```bash
    npm run dev
    ```
